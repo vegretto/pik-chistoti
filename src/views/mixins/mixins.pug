@@ -1,0 +1,45 @@
+mixin icon(iconName)
+  svg(class="icon icon-" + iconName)
+    use(xlink:href="img/svg/sprite.svg#" + iconName)
+
+mixin picture(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '.webp' type="image/webp")
+    img.lazyload(data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)
+
+mixin form-group(isDate, fgClass, type, classname, name, id, label, required, labelclass)
+  div(class=`form-group ${fgClass}`)
+    if (isDate)
+      label(for=id class=labelclass ) #{label}
+      div.datepicker-wrapper
+        input(class=classname type=type name=name id=id value=value readonly)
+    else if (type === "textarea")
+      label(for=id) #{label}
+      textarea(class=classname name=name id=id rows=rows) #{value}
+    else if (type === "checkbox")
+      .custom-cb-badge.js-custom-cb
+      label(for=id class=labelclass) #{label}
+      input(class=classname type=type name=name id=id value=value)
+    else if (type === "radio")
+      label(for=id class=labelclass) #{label}
+      input(class=classname type=type name=name id=id value=value)
+    else
+      label(for=id class=labelclass ) #{label}
+      input(class=classname type=type name=name id=id value=value)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+mixin form-group-allow(fgClass, type, name, id, label, required, labelclass)
+  div(class=`form-group ${fgClass}`)
+    input(type=type name=name id=id value=value)
+    label(for=id) #{label}
+
+
+mixin pictureFancybox(src, ext, width, height)
+  a(href=require('../../img/' + src + '.' + ext).default data-fancybox="gallery")
+    picture
+      source(data-srcset='img/' + src + '.webp' type="image/webp")
+      img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=require('../../img/' + src + '.' + ext).default  alt='image' width=width height=height)
+
+mixin pictureSVG(src, ext, width, height)
+  img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=require('../../svgIcons/' + src + '.' + ext).default  alt='image' width=width height=height)

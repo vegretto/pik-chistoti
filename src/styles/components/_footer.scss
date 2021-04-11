@@ -1,0 +1,231 @@
+.footer {
+  color: $white;
+  font-size: 18px;
+  line-height: 24px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  a {
+    color: $white;
+  }
+  &__top {
+    background-color: #232424;
+    padding: 35px 0 25px;
+  }
+  &__top-box {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 991px) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    @media (max-width: 600px) {
+      flex-basis: calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+    &--1 {
+      margin-right: 35px;
+      @media (max-width: 1199px) {
+        margin-right: 0;
+      }
+    }
+    &--1,
+    &--2 {
+      @media (max-width: 991px) {
+        margin-bottom: 45px;
+      }
+      @media (max-width: 600px) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__logo-slogan {
+    font-size: 14px;
+    margin-bottom: 4px;
+    @media (max-width: 600px) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+  &__logo {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 30px;
+    display: block;
+    @media (max-width: 600px) {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+  }
+  &__logo-descriptor {
+    max-width: 205px;
+    margin-bottom: 29px;
+    @media (max-width: 991px) {
+      margin-bottom: 0;
+    }
+  }
+  &__social-item {
+    .icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &__phone-wrapper {
+    display: flex;
+    align-items: center;
+    &:nth-child(2) {
+      @media (max-width: 991px) {
+        margin-bottom: auto;
+      }
+    }
+    .icon {
+      fill: #4582C9;
+      width: 12px;
+      height: 16px;
+      margin-right: 5px;
+    }
+    a {
+      font-size: 24px;
+      line-height: 39px;
+      &:hover {
+        text-decoration-color: $white;
+      }
+      @media (max-width: 600px) {
+        font-size: 17px;
+        line-height: 23px;
+      }
+    }
+  }
+  &__work-time {
+    line-height: 30px;
+    margin-bottom: 40px;
+    @media (max-width: 600px) {
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  &__address {
+    max-width: 245px;
+    line-height: 30px;
+    @media (max-width: 600px) {
+      line-height: 20px;
+    }
+  }
+  &__download-requisites,
+  &__join-team {
+    text-decoration-color: $white;
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+  &__requisites {
+    margin-bottom: 22px;
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__download-requisites {
+    margin-bottom: 40px;
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__bottom {
+    background-color: #131415;
+  }
+  &__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0 26px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 600px) {
+      padding: 15px 0 15px;
+    }
+  }
+  &__copywrite {
+    font-size: 16px;
+    color: #545D67;
+    @media (max-width: 600px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__policies {
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    span {
+      color: #545D67;
+      margin: 0 5px;
+      font-size: 16px;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+    a {
+      color: #545D67;
+      font-size: 16px;
+      &:hover {
+        text-decoration-color: #545D67;
+      }
+      @media (max-width: 600px) {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__creators {
+    font-size: 16px;
+    &:hover {
+      text-decoration-color: $white;
+    }
+  }
+  &__email {
+    margin-top: 20px;
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+    a {
+      font-size: 20px;
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
+      &:hover {
+        text-decoration-color: $white;
+      }
+    }
+  }
+}
+
+.footer--private {
+  .footer__phone-wrapper {
+    .icon {
+      fill: $orange;
+    }
+  }
+}
+
+.footer--commercial {
+  .footer__phone-wrapper {
+    .icon {
+      fill: $green;
+    }
+  }
+}

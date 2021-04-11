@@ -1,0 +1,20 @@
+//normalize
+@import "libs/normalize";
+@import "libs/swiper-vars";
+@import "libs/swiper";
+@import "libs/jquery.fancybox.min.css";
+
+//helpers styles
+@import "helpers/mixins";
+
+// base styles
+@import "base/variables";
+@import "base/fonts";
+@import "base/general";
+
+@import "components/header";
+@import "components/footer";
+@import "components/forms";
+@import "pages/index";
+@import "pages/commercial";
+@import "pages/private";

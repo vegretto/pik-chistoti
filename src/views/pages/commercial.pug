@@ -1,0 +1,538 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header
+block content
+    .page-wrapper.page-wrapper--commercial
+        section.top-banner
+            .top-banner__bg
+                +picture('commercial-top-bg', 'png', '1920', 'auto')
+            .top-banner__content
+                .container
+                    h1.h1-common.top-banner__title Клининг для бизнеса
+                    .top-banner__subtitle Разовая уборка и регулярное обслуживание
+                    ul.top-banner__list
+                        li Убираем в офисах
+                        li Подготавливаем помещения после ремонта
+                        li Обслуживаем бизнес-центры, аэропорты, стадионы, госучреждения, ТСЖ и пр.
+                    .top-banner__inner-box
+                        .top-banner__price от 10 ₽ / м<sup>2</sup>
+                        .common-btn-wrapper.common-btn-wrapper--green
+                            .btn.common-btn.common-btn--green.top-banner__btn.top-banner__btn--green.js-conversion-btn Получить прайс
+            .container.container--partners
+                .partners
+                    .partners__title Нам доверяют чистоту
+                    .partners__items
+                        .partners__item
+                            +icon('partner1')
+                            .partners__hover-text Олимпийский стадион «Фишт», Сочи
+                        .partners__item
+                            +icon('partner2')
+                            .partners__hover-text Аэропорт Платов, Ростов
+                        .partners__item
+                            +icon('partner3')
+                            .partners__hover-text ТРЦ «Галерея ПАРК»
+                        .partners__item
+                            +picture('partner4', 'png', '120', 'auto')
+                            .partners__hover-text Стадион «Ростов Арена»
+                        .partners__item
+                            +picture('partner5', 'png', '120', 'auto')
+                            .partners__hover-text Производственная компания «Интек»
+                        .partners__item
+                            +picture('partner6', 'png', '120', 'auto')
+                            .partners__hover-text Maxi Kids, Детский гимнастический центр
+        section.main-nav
+            .container
+                nav.main-nav__items
+                    a(href="#services").main-nav__item
+                        span Услуги клининга
+                    a(href="#advantages").main-nav__item
+                        span Формула чистоты
+                    a(href="#places").main-nav__item
+                        span Наши объекты
+                    a(href="#price").main-nav__item
+                        span Цена
+                    a(href="#team").main-nav__item
+                        span База клинеров
+                    a(href="#certs").main-nav__item
+                        span Сотрудничество
+                    a(href="#tenders").main-nav__item
+                        span Тендеры
+                    //a(href="#what").main-nav__item
+                    //    span Благодарность
+                    a(href="#order").main-nav__item
+                        span Как заказать уборку
+        section.services#services
+            .container
+                .services__inner
+                    h2.h2-common.services__title Услуги клининга
+                        span.green-txt  для бизнеса
+                    .services__items
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv1', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Все виды уборки по&nbsp;любому&nbsp;графику
+                                .services__item-text От разовой до ежедневной: утренней, ночной, круглосуточного обслуживания
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv2', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Выездная химчистка мебели, ковров, текстиля
+                                .services__item-text Восстанавливаем до состояния новых
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv3', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Мойка окон, фасадов, витрин и рекламных вывесок
+                                .services__item-text Тщательно отмываем загрязнение, не повреждая покрытий
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv4', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Промышленный альпинизм
+                                .services__item-text Моем остекление и вывески на любой высоте
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv5', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка территории
+                                .services__item-text Подготовим территорию к запуску объекта, поддержим чистоту каждый день: уберем мусор, листья, снег
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv6', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Озеленение и ландшафтный дизайн
+                                .services__item-text Разрабатываем дизайн-проекты, озеленяем территорию, создаем  цветники и газоны, которые легко поддерживать
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv7', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Дезинфекция и дезодорация помещений
+                                .services__item-text Устраняем бактерии и неприятные запахы
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+                        .services__item
+                            .services__item-img
+                                +picture('com-serv8', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Дезинсекция и дератизация
+                                .services__item-text Уничтожаем грызунов, насекомых, клещей безопасными средствами
+                                .btn.common-btn.common-btn--green.services__btn.services__btn--green.js-conversion-btn рассчитать
+        section.advantages#advantages
+            .advantages__bg
+                +picture('com-advant-bg', 'png', '1920', '825')
+            .container
+                .advantages__inner
+                    h2.h2-common.advantages__title.white-txt Обеспечим чистоту,<br> пока вы занимаетесь бизнесом
+                    .advantages__items
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant1')
+                            .advantages__text Уборка по любому графику, включая ночную и круглосуточную уборку
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant2')
+                            .advantages__text Работаем с любой площадью: от 20 до 151 400 м2 и более (стадион «Фишт»)
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant3')
+                            .advantages__text Привлечем любое количество клинеров (до 300 клинеров за 1 день)
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant4')
+                            .advantages__text Уложимся в любые сроки (у нас есть опыт срочной подготовки объектов к мероприятию за один день)
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant5')
+                            .advantages__text Все условия жестко прописываем в договоре — все прозрачно и понятно
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant6')
+                            .advantages__text Обеспечим «бесшовный» переход от смены к смене — чисто будет всегда
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant7')
+                            .advantages__text Убираем профессиональной немецкой химией и техникой:
+                                .green-txt KARCHER, Vileda Proffessional, Dr. Schnell, Kiehl, GRASS, эко-химия SYNERGETIC
+                        .advantages__item
+                            .advantages__icon
+                                +icon('com-advant8')
+                            .advantages__text Не мешаем покупателям и сотрудникам во время уборки
+        section.places#places
+            .container
+                h2.h2-common.places__title Объекты, которые
+                    span.green-txt  мы убираем
+            .places__slider.js-places-slider.swiper-container
+                .places__button--next.slider-button.slider-button--next
+                    +icon('arrow')
+                .places__button--prev.slider-button.slider-button--prev
+                    +icon('arrow')
+                .swiper-wrapper
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-01', 'png', '770', '520')
+                        .places__text Аэропорт Ростова «Платов»
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-5', 'png', '770', '520')
+                        .places__text Стадион «Ростов Арена»
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-1', 'png', '770', '520')
+                        .places__text ТРЦ «Парк», Ростов
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-9', 'png', '770', '520')
+                        .places__text Стадион «Фишт», Сочи
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-3', 'png', '770', '520')
+                        .places__text Стадион «Ростов Арена»
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-10', 'png', '770', '520')
+                        .places__text Стадион «Фишт», Сочи
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-7', 'png', '770', '520')
+                        .places__text Аэропорт Ростова «Платов»
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-4', 'png', '770', '520')
+                        .places__text Стадион «Ростов Арена»
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-2', 'png', '770', '520')
+                        .places__text ТРЦ «Парк», Ростов
+                    .places__slide.swiper-slide
+                        .places__slide-pic
+                            +picture('com-places-6', 'png', '770', '520')
+                        .places__text Стадион «Ростов Арена»
+        section.price#price
+            .container
+                .price__inner
+                    h2.h2-common.price__title Подберем тариф<br>
+                        .green-txt под любой бюджет
+                    .price__box
+                        .price__bg-pic
+                            +picture('price-girl', 'png', '372', '671')
+                        .price__left
+                            .price__descriptor Cредняя цена уборки офисов, магазинов и<br> коммерческой недвижимости в Ростове-на-Дону
+                            table.price__table
+                                tr.price__table-row
+                                    td.price__service Комплексная уборка
+                                    td.price__summ от 1800 ₽
+                                tr.price__table-row
+                                    td.price__service Генеральная уборка
+                                    td.price__summ от 2200 ₽
+                                tr.price__table-row
+                                    td.price__service Уборка после ремонта
+                                    td.price__summ от 2900 ₽
+                                tr.price__table-row
+                                    td.price__service Регулярная уборка
+                                        span от 1 раза в 3 месяца
+                                    td.price__summ от 30 ₽/кв.м.
+                                tr.price__table-row
+                                    td.price__service Регулярная уборка
+                                        span от 1 раза в месяц
+                                    td.price__summ от 20 ₽/кв.м.
+                                tr.price__table-row
+                                    td.price__service Ежедневная уборка
+                                    td.price__summ от 10 ₽/кв.м.
+
+
+                        .price__right
+                            .price__callback
+                                .price__callback-subtitle Профессиональный клининг эффективнее и часто даже дешевле, чем работники в штате
+                                .price__callback-text Оставьте заявку на бесплатный просчет, чтобы узнать цену и сравнить затраты
+                                .price__callback-phone-wrapper
+                                    .price__callback-icon
+                                        +icon('phone')
+                                    .price__callback-phone
+                                        a(href="tel:+79612882222") +7 961 288 22 22
+                                .common-btn-wrapper.common-btn-wrapper--green
+                                    .btn.common-btn.common-btn--green.price__callback-btn.js-conversion-btn Заявка на расчет
+        section.price-info
+            .container
+                .price-info__inner
+                    .price-info__left
+                        h3.h3-common.price-info__title Почему нет точной цены?
+                        .price-info__text Ни одна профессиональная клиниговая компания не назовет точную цену уборки до брифа или осмотра объекта. Это невозможно — ведь цена уборки зависит от объема и планировки помещений, типа отделочных материалов, степени загрязнения, времени и т.д.
+                        .price-info__quote
+                            .price-info__icon
+                                +icon('quote')
+                            .price-info__quote-text Мы стремимся быть честными и открытыми, поэтому каждый просчет делаем внимательно и стараемся учесть все детали.
+                    .price-info__right
+                        h3.h3-common.price-info__title Знаем, как сделать уборку дешевле<br> и не потерять в качестве
+                        .price-info__list
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text Правильно распределяем команды клинеров на объекте, чтобы они работали эффективно
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text Подбираем средства под ваши типы поверхности и степень загрязнения, чтобы избежать их перерасхода
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text Клинеры и менеджеры работают по чек-листам и регламентам — быстро и организованно
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text Отправляем к вам только опытных профессионалов уборки, которые сдали наш внутренний экзамен
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text Используем точные дозаторы, не экономим на расходных средствах, поэтому они служат дольше
+                            .price-info__list-item
+                                .price-info__list-icon
+                                    +icon('true')
+                                .price-info__list-text По желанию можем использовать ваши средства
+        section.team#team
+            .container
+                .team__inner
+                    h2.h2-common.team__title
+                        span.green-txt Крупнейшая база
+                        |  клинеров<br>на Юге России
+                    .team__nums
+                        .team__nums-item.team__nums-item--big
+                            .team__nums-item-num 1200
+                            .team__nums-item-text Клинеров в базе
+                        .team__nums-item
+                            .team__nums-item-num 600
+                            .team__nums-item-text Проверенных аутсорс-клинеров
+                        .team__nums-item
+                            .team__nums-item-num 100
+                            .team__nums-item-text Професиональных клинеров в штате
+                        .team__nums-item
+                            .team__nums-item-num 500
+                            .team__nums-item-text Клинеров с частичной занятостью
+
+                    .team__workers
+                        .team__workers-text
+                            p Мы работаем только с профессиональными клинерами от 25 до 40 лет.
+                            p Каждый сотрудник проходит стажировку от 1 месяца, а затем сдает экзамен.
+                            p Все клинеры прописаны в г. Ростов-на-Дону и имеют гражданство РФ.
+                        .team__workers-slider-outer
+                            .team__button--next.slider-button.slider-button--next
+                                +icon('arrow')
+                            .team__button--prev.slider-button.slider-button--prev
+                                +icon('arrow')
+                            .team__workers-slider.js-workers-slider.swiper-container
+                                .team__workers-slider-wrapper.swiper-wrapper
+                                    .team__workers-slide.swiper-slide
+                                        .team__workers-img
+                                            +picture('team-employee1', 'png', '125', '125')
+                                        .team__workers-job Мастер чистоты, химчистка
+                                        .team__workers-name Корсак Мария
+                                        .team__workers-info Работает с 2013 года<br>Больше 1000 уборок
+                                    .team__workers-slide.swiper-slide
+                                        .team__workers-img
+                                            +picture('team-employee2', 'png', '125', '125')
+                                        .team__workers-job Мастер чистоты
+                                        .team__workers-name Кузнецов Дмитрий
+                                        .team__workers-info Работает с 2016 года<br>Больше 800 уборок
+                                    .team__workers-slide.swiper-slide
+                                        .team__workers-img
+                                            +picture('team-employee3', 'jpg', '125', '125')
+                                        .team__workers-job Мастер чистоты, дезинфектор
+                                        .team__workers-name Жилин Михаил
+                                        .team__workers-info Работает с 2016 года<br>Больше 500 уборок
+                                    .team__workers-slide.swiper-slide
+                                        .team__workers-img
+                                            +picture('team-employee4', 'jpg', '125', '125')
+                                        .team__workers-job Ландшафтный дизайнер
+                                        .team__workers-name Матвеева Ольга
+                                        .team__workers-info Работает с 2017 года<br>Больше 50 проектов
+                                    .team__workers-slide.swiper-slide
+                                        .team__workers-img
+                                            +picture('team-employee5', 'jpg', '125', '125')
+                                        .team__workers-job Мастер чистоты, дезинфектор
+                                        .team__workers-name Зимин Матвей
+                                        .team__workers-info Работает с 2018 года<br>Больше 400 уборок
+        section.certs#certs
+            .container
+                .certs__inner
+                    h4.h4-common.certs__title Примеры сертификатов наших клинеров от компаний-партнеров
+                    .certs__slider.js-serts-slider.swiper-container
+                        .certs__button.certs__button--next.slider-button.slider-button--next
+                            +icon('arrow')
+                        .certs__button.certs__button--prev.slider-button.slider-button--prev
+                            +icon('arrow')
+                        .certs__slider-wrapper.swiper-wrapper
+                            .certs__slide
+                                a(href="img/certs1.jpg" data-fancybox="certs")
+                                    +picture('certs1-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+                            .certs__slide
+                                a(href="img/certs2.jpg" data-fancybox="certs")
+                                    +picture('certs2-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+                            .certs__slide
+                                a(href="img/certs3.jpg" data-fancybox="certs")
+                                    +picture('certs3-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+        section.partners-section
+            .container
+                .partners-section__top
+                    h2.h2-common.partners-section__title Все услуги от одного
+                        span.green-txt  надежного партнера
+                    +icon('partners-arrow')
+                    .partners-section__top-text Без лишних встреч, договоров и отчетов. Мы берем на себя всю ответсвенностью за чистоту офиса, здания и территории
+                .partners-section__middle
+                    .partners-section__middle-subtitle
+                        span Сотрудничаем с любыми организациями
+                    .partners-section__middle-lists
+                        .partners-section__middle-list-item
+                            .partners-section__middle-list-subtitle Уже обслуживаем
+                            ul.partners-section__list
+                                li Спортивные объекты: стадион «Ростов Арена» и Олимпийский стадион «Фишт» в Сочи
+                                li Бизнес-центры и торгово-развлекательные центры
+                                li Аэропорты, вокзалы
+                                li Магазины и торговые точки
+                                li Гос. учреждения, банки
+                                li ТСЖ и ЖКХ
+                                li Производственные предприятия
+                                li Кафе и рестораны, сети общественного питания
+                                li Спортивные клубы, бассейны
+                        .partners-section__middle-list-item
+                            .partners-section__middle-list-subtitle Готовы обслуживать
+                            ul.partners-section__list
+                                li Институты, школы, детские сады, центры развития
+                                li Отели, гостиницы, хостелы
+                                li Медицинские центры,<br>поликлиники
+                                li Салоны красоты и<br>парикмахерские
+                                li Склады, парковки
+                                li Рынки и тороговые площади
+                .partners-section__bottom
+                    .partners-section__bottom-inner
+                        h4.h4-common.partners-section__bottom-title Мы — проверенные партнеры
+                        .partners-section__bottom-slider.js-partners-slider.swiper-container
+                            .partners-section__bottom-button.partners-section__bottom-button--next.slider-button.slider-button--next
+                                +icon('arrow')
+                            .partners-section__bottom-button.partners-section__bottom-button--prev.slider-button.slider-button--prev
+                                +icon('arrow')
+                            .partners-section__bottom-slider-wrapper.swiper-wrapper
+                                .partners-section__bottom-slide
+                                    a(href="img/partners1.jpg" data-fancybox="partners")
+                                        +picture('partners1-sm', 'png', 'auto', '385')
+                                        .zoom-icon
+                                            +icon('zoom')
+                                .partners-section__bottom-slide
+                                    a(href="img/partners2.jpeg" data-fancybox="partners")
+                                        +picture('partners2-sm', 'png', 'auto', '385')
+                                        .zoom-icon
+                                            +icon('zoom')
+        section.tenders#tenders
+            .container
+                .tenders__inner
+                    .tenders__left
+                        h4.h4-common.tenders__title Умеем и любим участвовать в тендерах
+                        .tenders__text Мы уже выиграли несколько крупных тендеров на обслуживание объектов. Отлично знаковы с особенностями сотрудничесва и процедурой участия.
+                        .tenders__subtitle Аккредитованы на всех основных тендерных площадках
+                    .tenders__phone
+                        +picture('tenders-phone', 'png', '226', '454')
+                    .tenders__right
+                        .tenders__callback-text Расскажем о тендерах подробнее
+                        .tenders__callback-phone-wrapper
+                            .tenders__callback-icon
+                                +icon('phone')
+                            .tenders__callback-phone
+                                a(href="tel:+79612882222") +7 961 288 22 22
+                        .common-btn-wrapper.common-btn-wrapper--green
+                            .btn.common-btn.common-btn--green.tenders__callback-btn.js-conversion-btn Перезвоните мне
+        section.order#order
+            .container
+                .order__inner
+                    h2.h2-common.order__title
+                        span.green-txt Как заказать уборку
+                        |  офиса в Ростове-на-Дону?
+                    .order__items
+                        .order__item
+                            .order__icon
+                                +icon('order1')
+                                .order__number 01
+                            .order__text Позвоните нам по телефону <a href="tel:"89612882222">8 (961) 288–22–22</a><br> или оставьте заявку на обратный звонок.
+                        .order__item
+                            .order__icon
+                                +icon('order2')
+                                .order__number 02
+                            .order__text Для разовой уборки или услуг менеджер сразу назовет цену и забронирует день и время. Для больших заказов подготовим смету в течение 30 минут.
+                        .order__item
+                            .order__icon
+                                +icon('order3')
+                                .order__number 03
+                            .order__text На большой объект приедет менеджер — чтобы оценить объем работ, согласовать список услуг, подписать договор.
+                        .order__item
+                            .order__icon
+                                +icon('order4')
+                                .order__number 04
+                            .order__text За несколько дней до начала работ приедет эксперт-клинер и составит технические карты уборки и чек-листы качества. После этого завезем всю технику и инвентарь, назначим команду клинеров для каждой зоны уборки.
+                        .order__item
+                            .order__icon
+                                +icon('order5')
+                                .order__number 05
+                            .order__text Пунктуально начнем уборку в назначенный день — все клинеры и инвентарь заранее будут готовы к началу смены.
+        section.cost-request.cost-request--commercial
+            .container
+                .cost-request__inner
+                    .cost-request__title-wrapper
+                        .cost-request__title Быстрый расчет уборки по телефону за
+                            span &nbsp;3&nbsp;минуты
+                    form.cost-request__form
+                        .cost-request__form-wrapper
+                            .form-group.form-group--custom-select
+                                select(name="cost-request-room-type").select__hidden#cost-request-room-type
+                                    option Квартира или офис
+                                    option Уборка квартиры или дома
+                                    option Уборка коммерческой недвижимости
+                                .custom-select__styled Где будем убирать?
+                                .custom-select__options
+                                    .custom-select__options-inner
+                                        .custom-select__options-pointer
+                                        .custom-select__option Квартира или офис
+                                        .custom-select__option Уборка квартиры или дома
+                                        .custom-select__option Уборка коммерческой недвижимости
+                                .error-message Это поле обязательно для заполнения
+                            .form-group.form-group--custom-select
+                                select(name="cost-request-clean-type").select__hidden#cost-request-clean-type
+                                    option Комплексная уборка
+                                    option Генеральная уборка
+                                    option Уборка после ремонта, пожара
+                                    option Химчистка мебели, ковров, текстиля
+                                    option Мойка окон, фасада, витрин
+                                    option Дезинфекция и дезодорация
+                                    option Уборка территории
+                                    option Озеленение
+                                .custom-select__styled Вид уборки или услуги?
+                                .custom-select__options
+                                    .custom-select__options-inner
+                                        .custom-select__options-pointer
+                                        .custom-select__option Комплексная уборка
+                                        .custom-select__option Генеральная уборка
+                                        .custom-select__option Уборка после ремонта, пожара
+                                        .custom-select__option Химчистка мебели, ковров, текстиля
+                                        .custom-select__option Мойка окон, фасада, витрин
+                                        .custom-select__option Дезинфекция и дезодорация
+                                        .custom-select__option Уборка территории
+                                        .custom-select__option Озеленение
+                                .error-message Это поле обязательно для заполнения
+                            +form-group(false, 'form-group--custom form-group--phone', 'tel', 'custom-input js-input', 'cost-request-phone', 'cost-request-phone', '+7 (___) ___-__-__', true)
+                            .common-btn-wrapper.common-btn-wrapper--green
+                                button(type="submit").btn.common-btn.common-btn--green.cost-request__btn.js-request Заявка на расчет
+                        .form-group.form-group__allow
+                            input(type="checkbox" name="callback-allow" id="book-modal-allow" required checked)
+                            label(for="book-modal-allow") Я даю согласие на обработку моих персональных данных
+block footer
+    include ../components/footer-commercial

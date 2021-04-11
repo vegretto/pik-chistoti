@@ -1,0 +1,648 @@
+extends ../layout
+include ../mixins/mixins
+
+block header
+    include ../components/header-private
+block content
+    .page-wrapper.page-wrapper--private
+        section.top-banner.top-banner--private
+            .top-banner__bg
+                +picture('private-top-bg', 'png', '1920', 'auto')
+            .top-banner__content
+                .container
+                    h1.h1-common.top-banner__title С заботой уберем в вашем доме
+                    .top-banner__subtitle Химчистка дивана в подарок!
+                        span При заказе уборки от 5 500 рублей
+                    .top-banner__inner-box
+                        .common-btn-wrapper.common-btn-wrapper--orange
+                            .btn.common-btn.common-btn--orange.top-banner__btn.top-banner__btn--orange.js-conversion-btn Заказать уборку
+                        a(href="tel:+79612882222").top-banner__phone +7 961 288-22-22
+            .container.container--partners
+                .partners
+                    .partners__title Нам доверяют чистоту
+                    .partners__items
+                        .partners__item
+                            +icon('partner1')
+                            .partners__hover-text Олимпийский стадион «Фишт», Сочи
+                        .partners__item
+                            +icon('partner2')
+                            .partners__hover-text Аэропорт Платов, Ростов
+                        .partners__item
+                            +icon('partner3')
+                            .partners__hover-text ТРЦ «Галерея ПАРК»
+                        .partners__item
+                            +picture('partner4', 'png', '120', 'auto')
+                            .partners__hover-text Стадион «Ростов Арена»
+                        .partners__item
+                            +picture('partner5', 'png', '120', 'auto')
+                            .partners__hover-text Производственная компания «Интек»
+                        .partners__item
+                            +picture('partner6', 'png', '120', 'auto')
+                            .partners__hover-text Maxi Kids, Детский гимнастический центр
+            .top-banner__right
+                .top-banner__girl
+                    +picture('top-banner-girl', 'png', '560', '769')
+                .top-banner__girl-info
+                    .top-banner__girl-job Мастер чистоты
+                    .top-banner__girl-name Щебетун Наталья
+                    .top-banner__girl-text Работает с 2017 года<br>417 уборок
+        section.main-nav.main-nav--private
+            .container
+                nav.main-nav__items
+                    a(href="#before-after").main-nav__item
+                        span До и после уборки
+                    a(href="#formula").main-nav__item
+                        span Формула чистоты
+                    a(href="#services").main-nav__item
+                        span Виды уборки
+                    a(href="#additional").main-nav__item
+                        span Другие услуги
+                    a(href="#price").main-nav__item
+                        span Цена
+                    a(href="#team").main-nav__item
+                        span Команда чистоты
+                    a(href="#testimonials").main-nav__item
+                        span Отзывы
+                    a(href="#promo").main-nav__item
+                        span Акции
+                    a(href="#order").main-nav__item
+                        span Как заказать уборку
+        section.places.places--private#before-after
+            .container
+                h2.h2-common.places__title Наводим чистоту в домах и квартирах
+                .places__subtitle Сделали более 2 800 уборок за 9 лет
+            .places__slider.js-places-slider.swiper-container
+                .places__button--next.slider-button.slider-button--next
+                    +icon('arrow')
+                .places__button--prev.slider-button.slider-button--prev
+                    +icon('arrow')
+                .swiper-wrapper
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-1.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-1', 'png', '770', '565')
+                            .zoom-icon
+                                +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-2.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-2', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-3.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-3', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-4.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-4', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-5.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-5', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-6.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-6', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-7.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-7', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-8.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-8', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-9.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-9', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-10.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-10', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-11.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-11', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-12.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-12', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-13.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-13', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-14.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-14', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-15.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-15', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-16.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-16', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-18.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-18', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-19.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-19', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-10.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-20', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-21.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-21', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-22.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-22', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-23.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-23', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-24.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-24', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-25.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-25', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                        a(href="img/priv-places-26.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-26', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+                    .places__slide.swiper-slide
+                            a(href="img/priv-places-27.png" data-fancybox="before-after")
+                            .places__slide-pic
+                                +picture('priv-places-27', 'png', '770', '565')
+                                .zoom-icon
+                                    +icon('zoom')
+        section.order.formula#formula
+            .container
+                .order__inner
+                    h2.h2-common.order__title Наша формула чистоты
+                    .order__items
+                        .order__item
+                            .order__icon
+                                +icon('formula1')
+                            .order__text Немецкая профессиональная химия для уборки: <span class="orange-txt">Dr. Schnell, Kiehl, GRASS, эко-химия SYNERGETIC</span>
+                        .order__item
+                            .order__icon
+                                +icon('formula2')
+                            .order__text На уборку приедет эксперт и проверит ее качество по чек-листу. Ему можно задать вопросы и попросить исправить недочеты
+                        .order__item
+                            .order__icon
+                                +icon('formula3')
+                            .order__text Дорогое немецкое оборудование для уборки <span class="orange-txt">KARCHER</span> и инвентарь <span class="orange-txt">Vileda Proffessional</span>
+                        .order__item
+                            .order__icon
+                                +icon('formula4')
+                            .order__text Каждая уборка проходит по чек-листам, которые мы доработаываем и пополняем уже 12 лет!
+                        .order__item
+                            .order__icon
+                                +icon('formula5')
+                            .order__text Клинеры с опытом от 10 до более 1000 уборок
+                        .order__item
+                            .order__icon
+                                +icon('formula6')
+                            .order__text Каждая уборка застрахована: если что-то пойдет не так, возместим средства из страхового фонда компании
+        section.services.services--private#services
+            .services__bg
+                +picture('services-bg', 'png', '661', '570')
+            .container
+                .services__inner
+                    h2.h2-common.services__title Делаем премиум-уборку по цене обычной
+                    .services__items
+                        .services__item.services__item--placeholder
+                            .services__item-content
+                                .services__item-title Поможем с регулярной уборкой и подготовим дом к важным моментам.
+                                .services__icon
+                                    +icon('services')
+                                .services__item-text Для каждой уборки используем средства и технику, которые обычно используют только для премиум-уборки
+
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv1', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Генеральная уборка
+                                .services__item-text Заставим дом снова сиять: от кухонной плиты и раковины в ванной, до зеркал, дверных ручек и выключателей
+                                .services__item-price от 45 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv2', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Комплексная уборка
+                                .services__item-text Полноценная поддерживающая уборка. Подойдет, если нужно быстро привести дом в порядок перед приходом гостей или после праздника
+                                .services__item-price от 35 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv3', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка после ремонта или переезда
+                                .services__item-text Подготовим квартиру к переезду под ключ: вывезем весь строительный мусор, отмоем краску с плинтусов, вымоем все поверхности с профессиональной химией
+                                .services__item-price от 45 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv4', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка после пожара
+                                .services__item-text Вынесем обгоревшую мебель и мусор, очистим сохранившуюся обстановку от копоти, отмоем окна и дверные откосы, удалим неприятный запах
+                                .services__item-price от 35 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv5', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка дома у родителей
+                                .services__item-text Позаботимся о порядке у ваших родителей: сделаем легкую или генеральную уборку, поможем убрать в труднодоступных местах и там, где высоко. Можем убирать регулярно: каждый месяц или неделю
+                                .services__item-price от 35 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv6', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка перед выпиской из роддома
+                                .services__item-text Наведем чистоту к приезду нового важного жильца! Очистим мебель и текстиль от пыли и аллергенов, вымоем все поверхности и сантехнику с дезинфицирующими средствами
+                                .services__item-price от 35 ₽ / м2
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать уборку
+        section.services.services--private.services--additional#additional
+            .container
+                .services__inner
+                    h2.h2-common.services__title Другие услуги
+                    .services__items
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv7', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Мытьё окон и фасадов
+                                .services__item-text
+                                    .ul
+                                        li Мытье окон от — 90 руб./окно
+                                        li Мытье фасадов — от 45 руб./кв.м.
+                                        li Мытье остекления альпинистами — от 30 руб./кв.м.
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv8', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Химчистка ковров, мебели, штор и текстиля на дому
+                                .services__item-text
+                                    .ul
+                                        li Химчистка ковров — от 50 руб./кв.м.
+                                        li Химчистка диванов, кресел и стульев — от 100 руб./шт.
+                                        li Чистка парогенератором (шторы и текстиль) — от 200 руб.
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv9', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Дезинфекция и дезодорация
+                                .services__item-text
+                                    .ul
+                                        li Дезинфекция помещений — от 35 руб./кв.м.
+                                        li Удаление не приятных запахов — индивидуальный расчет
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать
+                        .services__item
+                            .services__item-img
+                                +picture('priv-serv10', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Уборка на этаже, в подъезде и во дворе. Озеленение и ландшафтный дизайн
+                                .services__item-text Делаем разовую уборку или регулярно поддерживаем чистоту. Разрабатываем проекты озеленения территории, создаем цветники и газоны
+                                .btn.common-btn.common-btn--orange.services__btn.js-conversion-btn Заказать
+        section.price.price--private#price
+            .price__right-bg
+                +picture('price-bg', 'png', '960', '591')
+            .container
+                .price__inner
+                    h2.h2-common.price__title Средняя цена уборки квартиры или дома
+                    .price__box
+                        .price__left
+                            .price__descriptor Средняя стоимость уборки квартиры или дома в Ростове-на-Дону
+                            table.price__table
+                                tr.price__table-row
+                                    td.price__service Комплексная уборка
+                                    td.price__summ от 1800 ₽
+                                tr.price__table-row
+                                    td.price__service Генеральная уборка
+                                    td.price__summ от 2200 ₽
+                                tr.price__table-row
+                                    td.price__service Уборка после ремонта
+                                    td.price__summ от 2900 ₽
+                                tr.price__table-row
+                                    td.price__service Регулярная уборка
+                                        span от 1 раза в 3 месяца
+                                    td.price__summ от 30 ₽/кв.м.
+
+                            .price__calculate
+                                .price__calculate-title Рассчитать цену уборки
+                                .btn.common-btn.common-btn--orange.price__btn.price__btn--orange.js-conversion-btn Заказать уборку
+                                a(href="tel:+79612882222").price__calculate-phone +7 961 288 22 22
+                        .price__right
+                            .price-info__inner
+                                .price-info__left
+                                    h3.h3-common.price-info__title Почему нет точной цены?
+                                    .price-info__text Каждая уборка — индивидуальна. Часто услуги, включенные в готовые тарифы, не нужны. Или услуга может стоить дешевле / дороже в зависимости от отделочных материалов или уровня загрязнения.
+                                    .price-info__quote
+                                        .price-info__icon
+                                            +icon('quote')
+                                        .price-info__quote-text Мы всегда делаем индивидуальный расчет, чтобы назвать вам точную цену.  В цену включены только нужные работы.
+                                    .price-info__text А еще — личное общение помогает выяснить важные детали: благодаря им мы сразу возьмем с собой все нужные средства и технику.
+        section.team.team--private#team
+            .container
+                .team__inner
+                    .partners-section__top
+                        h2.h2-common.partners-section__title Наши лучшие мастера чистоты
+                        +icon('partners-arrow')
+                        .partners-section__top-text Будьте уверены — к вам приедет профессионал, который сделает уборку качественно и быстро.
+                .team__workers
+                    .team__workers-text
+                        p Мы работаем только с профессиональными клинерами от 25 до 40 лет.
+                        p Каждый сотрудник проходит стажировку от 1 месяца, а затем сдает экзамен.
+                        p Все клинеры прописаны в г. Ростов-на-Дону и имеют гражданство РФ.
+                    .team__workers-slider-outer
+                        .team__button--next.slider-button.slider-button--next
+                            +icon('arrow')
+                        .team__button--prev.slider-button.slider-button--prev
+                            +icon('arrow')
+                        .team__workers-slider.js-workers-slider.swiper-container
+                            .team__workers-slider-wrapper.swiper-wrapper
+                                .team__workers-slide.swiper-slide
+                                    .team__workers-img
+                                        +picture('team-employee1', 'png', '125', '125')
+                                    .team__workers-job Мастер чистоты, химчистка
+                                    .team__workers-name Корсак Мария
+                                    .team__workers-info Работает с 2013 года<br>Больше 1000 уборок
+                                .team__workers-slide.swiper-slide
+                                    .team__workers-img
+                                        +picture('team-employee2', 'png', '125', '125')
+                                    .team__workers-job Мастер чистоты
+                                    .team__workers-name Кузнецов Дмитрий
+                                    .team__workers-info Работает с 2016 года<br>Больше 800 уборок
+                                .team__workers-slide.swiper-slide
+                                    .team__workers-img
+                                        +picture('team-employee3', 'jpg', '125', '125')
+                                    .team__workers-job Мастер чистоты, дезинфектор
+                                    .team__workers-name Жилин Михаил
+                                    .team__workers-info Работает с 2016 года<br>Больше 500 уборок
+                                .team__workers-slide.swiper-slide
+                                    .team__workers-img
+                                        +picture('team-employee4', 'jpg', '125', '125')
+                                    .team__workers-job Ландшафтный дизайнер
+                                    .team__workers-name Матвеева Ольга
+                                    .team__workers-info Работает с 2017 года<br>Больше 50 проектов
+                                .team__workers-slide.swiper-slide
+                                    .team__workers-img
+                                        +picture('team-employee5', 'jpg', '125', '125')
+                                    .team__workers-job Мастер чистоты, дезинфектор
+                                    .team__workers-name Зимин Матвей
+                                    .team__workers-info Работает с 2018 года<br>Больше 400 уборок
+        section.certs.certs--private
+            .container
+                .certs__inner
+                    h2.h2-common.certs__title Примеры сертификатов наших клинеров от компаний-партнеров
+                    .certs__slider.js-serts-slider.swiper-container
+                        .certs__button.certs__button--next.slider-button.slider-button--next
+                            +icon('arrow')
+                        .certs__button.certs__button--prev.slider-button.slider-button--prev
+                            +icon('arrow')
+                        .certs__slider-wrapper.swiper-wrapper
+                            .certs__slide
+                                a(href="img/certs1.jpg" data-fancybox="certs")
+                                    +picture('certs1-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+                            .certs__slide
+                                a(href="img/certs2.jpg" data-fancybox="certs")
+                                    +picture('certs2-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+                            .certs__slide
+                                a(href="img/certs3.jpg" data-fancybox="certs")
+                                    +picture('certs3-sm', 'png', 'auto', '385')
+                                    .zoom-icon
+                                        +icon('zoom')
+        section.testimonials#testimonials
+            .container
+                .testimonials__inner
+                    h2.h2-common.testimonials__title Отзывы о нашей уборке
+                    .testimonials__box
+                        .testimonials__info
+                            span После каждой уборки мы спрашиваем: «Довольны ли вы уборкой?»
+                            span И каждый раз гордимся и радуемся, когда нам отвечают: «Да»
+                            .testimonials__icon
+                                +icon('testimonials')
+                        .testimonials__slider-outer
+                            .testimonials__button.testimonials__button--next.slider-button.slider-button--next
+                                +icon('arrow')
+                            .testimonials__button.testimonials__button--prev.slider-button.slider-button--prev
+                                +icon('arrow')
+                            .testimonials__slider.swiper-container
+                                .testimonials__slider-wrapper.swiper-wrapper
+                                    .testimonials__slide.swiper-slide
+                                        a(href="img/testimonials-1.jpg" data-fancybox="testimonials")
+                                            +picture('testimonials-1-sm', 'png', '340', '640')
+                                                .zoom-icon
+                                                    +icon('zoom')
+                                    .testimonials__slide.swiper-slide
+                                        a(href="img/testimonials-2.jpg" data-fancybox="testimonials")
+                                            +picture('testimonials-2-sm', 'png', '340', '640')
+                                                .zoom-icon
+                                                    +icon('zoom')
+                                    .testimonials__slide.swiper-slide
+                                        a(href="img/testimonials-3.jpg" data-fancybox="testimonials")
+                                            +picture('testimonials-3-sm', 'png', '340', '640')
+                                                .zoom-icon
+                                                    +icon('zoom')
+                                    .testimonials__slide.swiper-slide
+                                        a(href="img/testimonials-4.jpg" data-fancybox="testimonials")
+                                            +picture('testimonials-4-sm', 'png', '340', '640')
+                                                .zoom-icon
+                                                    +icon('zoom')
+                                    .testimonials__slide.swiper-slide
+                                        a(href="img/testimonials-5.jpg" data-fancybox="testimonials")
+                                            +picture('testimonials-5-sm', 'png', '340', '640')
+                                                .zoom-icon
+                                                    +icon('zoom')
+        section.services.services--private.services--additional.promo#promo
+            .container
+                .services__inner
+                    h2.h2-common.services__title Акции и скидки
+                    .services__items
+                        .services__item
+                            .services__item-img
+                                +picture('promo1', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Персональный клинер по подписке
+                                .services__item-text Заказывайте уборку регулярно и получайте приятные скидки<br> Раз в месяц — 3% <br> 2 раза в месяц — 5% <br>Один или несколько раз в неделю — персональная скидка
+                        .services__item
+                            .services__item-img
+                                +picture('promo2', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Скидка 10% на химчистку ковров и мягкой мебели
+                                .services__item-text При заказе генеральной уборки от 8000 рублей
+                        .services__item
+                            .services__item-img
+                                +picture('promo3', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title Отмываем варенье до и после дня рождения!
+                                .services__item-text Скидка 15% на все виды уборки и услуг 5 дней до и после дня рождения (уборку можно забронировать в дни акции на любые даты в течение месяца)
+                        .services__item
+                            .services__item-img
+                                +picture('promo4', 'png', '345', '200')
+                            .services__item-content
+                                .services__item-title С заботой о тех, кто заботится
+                                .services__item-text Скидка 5% на уборку дома у ваших родителей.<br> Назовите промокод «Забота» при бронировании уборки
+        section.order.order--private#order
+            .container
+                .order__inner
+                    h2.h2-common.order__title  Как заказать уборку
+                    .order__box
+                        .order__left
+                            .order__items
+                                .order__item
+                                    .order__icon
+                                        +icon('orderp1')
+                                        .order__number 01
+                                    .order__text Позвоните нам по телефону <a href="tel:"89612882222">8 (961) 288–22–22</a><br> или оставьте заявку на обратный звонок.
+                                .order__item
+                                    .order__icon
+                                        +icon('orderp2')
+                                        .order__number 02
+                                    .order__text Менеджер рассчитает цену уборки, включая только те услуги, которые вам нужны.
+                                .order__item
+                                    .order__icon
+                                        +icon('orderp3')
+                                        .order__number 03
+                                    .order__text Забронируем дату и время уборки. Если нужно — можем выехать к вам тот же день.
+                                .order__item
+                                    .order__icon
+                                        +icon('orderp4')
+                                        .order__number 04
+                                    .order__text В назначенное время приедет клинер или команда с техникой и средствами для уборки. Они качественно и быстро уберут ваш дом, используя профессиональные средства. По вашему желанию можем использовать в уборке только экосредства — упомяните это при оформлении заявки.
+                                .order__item
+                                    .order__icon
+                                        +icon('orderp5')
+                                        .order__number 05
+                                    .order__text К окончанию уборки приедет менеджер и тщательно проверит все работы по чек-листу. Если есть недочеты, мы сразу их исправим.
+                        .order_right
+                            .order__infobox
+                                .order__infobox-bg
+                                    +picture('order-infobox', 'png', '517', '632')
+                                .order__infobox-content
+                                    .order__infobox-icon
+                                        +icon('order-right')
+                                    .order__infobox-title Уборку можно заказать на любой день недели, но заявки мы принимаем с понедельника по субботу.
+                                    .order__infobox-text Уборку на воскресенье можно заказать в будние дни и в субботу до 18:00.
+        section.cost-request.cost-request--private
+            .container
+                .cost-request__inner
+                    .cost-request__title-wrapper
+                        .cost-request__title Быстрый расчет уборки по телефону за
+                            span &nbsp;3&nbsp;минуты
+                    form.cost-request__form
+                        .cost-request__form-wrapper
+                            .form-group.form-group--custom-select
+                                select(name="cost-request-room-type").select__hidden#cost-request-room-type
+                                    option Квартира или офис
+                                    option Уборка квартиры или дома
+                                    option Уборка коммерческой недвижимости
+                                .custom-select__styled Где будем убирать?
+                                .custom-select__options
+                                    .custom-select__options-inner
+                                        .custom-select__options-pointer
+                                        .custom-select__option Квартира или офис
+                                        .custom-select__option Уборка квартиры или дома
+                                        .custom-select__option Уборка коммерческой недвижимости
+                                .error-message Это поле обязательно для заполнения
+                            .form-group.form-group--custom-select
+                                select(name="cost-request-clean-type").select__hidden#cost-request-clean-type
+                                    option Комплексная уборка
+                                    option Генеральная уборка
+                                    option Уборка после ремонта, пожара
+                                    option Химчистка мебели, ковров, текстиля
+                                    option Мойка окон, фасада, витрин
+                                    option Дезинфекция и дезодорация
+                                    option Уборка территории
+                                    option Озеленение
+                                .custom-select__styled Вид уборки или услуги?
+                                .custom-select__options
+                                    .custom-select__options-inner
+                                        .custom-select__options-pointer
+                                        .custom-select__option Комплексная уборка
+                                        .custom-select__option Генеральная уборка
+                                        .custom-select__option Уборка после ремонта, пожара
+                                        .custom-select__option Химчистка мебели, ковров, текстиля
+                                        .custom-select__option Мойка окон, фасада, витрин
+                                        .custom-select__option Дезинфекция и дезодорация
+                                        .custom-select__option Уборка территории
+                                        .custom-select__option Озеленение
+                                .error-message Это поле обязательно для заполнения
+                            +form-group(false, 'form-group--custom form-group--phone', 'tel', 'custom-input js-input', 'cost-request-phone', 'cost-request-phone', '+7 (___) ___-__-__', true)
+                            .common-btn-wrapper.common-btn-wrapper--orange
+                                button(type="submit").btn.common-btn.common-btn--orange.cost-request__btn.js-request Заявка на расчет
+                        .form-group.form-group__allow
+                            input(type="checkbox" name="callback-allow" id="book-modal-allow" required checked)
+                            label(for="book-modal-allow") Я даю согласие на обработку моих персональных данных
+
+
+block footer
+    include ../components/footer-private

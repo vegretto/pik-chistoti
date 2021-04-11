@@ -1,0 +1,224 @@
+.header {
+  color: $white;
+  border-bottom: 1px solid #fff3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  @media (max-width: 1199px) {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px 0;
+    background: #2A4164;
+    position: static;
+  }
+  a {
+    color: $white;
+  }
+  .container {
+    @media (max-width: 1199px) {
+      padding: 0;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0;
+    @media (max-width: 1199px) {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+    }
+  }
+  &__logo-desc-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-link {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    @media (max-width: 600px) {
+      margin-right: 10px;
+    }
+  }
+  &__logo-sm {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    @media (max-width: 600px) {
+      font-size: 10px;
+    }
+  }
+  &__logo {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    @media (max-width: 600px) {
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+  }
+  &__descriptor {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 180px;
+    @media (max-width: 1199px) {
+      max-width: none;
+      margin-bottom: 15x;
+      width: 100%;
+      text-align: center;
+      padding: 10px 15px;
+      background-color: #283C5B;
+      margin-top: 15px;
+    }
+    @media (max-width: 600px) {
+      opacity: 0.5;
+    }
+  }
+  &__nav {
+    display: flex;
+    @media (max-width: 1199px) {
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 15px;
+      padding: 0 15px;
+    }
+  }
+  &__nav-item {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 40px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: $white;
+      left: 0;
+      bottom: -32px;
+      opacity: 0;
+      transition: 0.2s ease-in-out;
+      @media (max-width: 1199px) {
+        bottom: -15px;
+      }
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+      }
+    }
+    &.active {
+      &:before {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 600px) {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__phone-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    .icon {
+      width: 12px;
+      height: 16px;
+      fill: $white;
+      margin-right: 15px;
+      @media (max-width: 600px) {
+        margin-right: 5px;
+      }
+    }
+    a {
+      font-size: 20px;
+      font-weight: 500;
+      &:hover {
+        text-decoration-color: #ffffff;
+      }
+      @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+  &__work-time {
+    font-size: 14px;
+    line-height: 14px;
+    @media (max-width: 600px) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+  &__mobile-wrapper {
+    display: flex;
+    &--top {
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+    &--bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &--private {
+    background: #FFFFFFCC;
+    color: $dgrey;
+    .header__logo {
+      color: $orange;
+    }
+    .header__logo-sm {
+      color: $dgrey;
+    }
+    .header__descriptor {
+      @media (max-width: 1199px) {
+        background-color: $ulgrey;
+        color: $orange;
+        opacity: 0.7;
+      }
+    }
+    .header__nav-item {
+      color: #202020;
+      &:before {
+        background-color: $orange;
+        bottom: -33px;
+        @media (max-width: 1199px) {
+          bottom: -15px;
+        }
+      }
+    }
+    .header__phone-wrapper {
+      .icon {
+        fill: $orange;
+      }
+      a {
+        color: #202020;
+        font-weight: 600;
+        &:hover {
+          text-decoration-color: #202020;
+        }
+      }
+    }
+  }
+}
+
+
